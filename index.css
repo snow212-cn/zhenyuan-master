@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Dark Theme (Softened) */
+  --bg-main: #1a1b26;
+  --bg-panel: #24283b;
+  --col-text-main: #c0caf5;
+  --col-text-muted: #787c99;
+  --col-border: #414868;
+  
+  --col-accent: #7aa2f7;      /* Soft Blue */
+  --col-success: #9ece6a;     /* Soft Green */
+  --col-warning: #e0af68;     /* Soft Orange */
+  --col-danger: #f7768e;      /* Soft Red */
+  --col-highlight: #bb9af7;   /* Soft Purple */
+}
+
+/* Light Theme */
+body.theme-light {
+  --bg-main: #f0f2f5;
+  --bg-panel: #ffffff;
+  --col-text-main: #374151;
+  --col-text-muted: #6b7280;
+  --col-border: #e5e7eb;
+
+  --col-accent: #3b82f6;      /* Vivid Blue */
+  --col-success: #10b981;     /* Vivid Green */
+  --col-warning: #f59e0b;     /* Vivid Orange */
+  --col-danger: #ef4444;      /* Vivid Red */
+  --col-highlight: #8b5cf6;   /* Vivid Purple */
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--col-text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--col-border); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--col-text-muted); 
+}
