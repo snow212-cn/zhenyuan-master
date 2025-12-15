@@ -36,8 +36,10 @@ export const getBreakthroughTime = (targetLevelEndingIn9: number, reductionPerce
   let baseTime = 0;
   if (targetLevelEndingIn9 >= 99 && targetLevelEndingIn9 <= 289) {
     baseTime = 2;
-  } else if (targetLevelEndingIn9 >= 299) {
+  } else if (targetLevelEndingIn9 >= 299 && targetLevelEndingIn9 <= 389) {
     baseTime = 4;
+  } else if (targetLevelEndingIn9 >= 399) {
+    baseTime = 8;
   }
   
   return baseTime * (1 - reductionPercent / 100);
